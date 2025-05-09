@@ -24,6 +24,7 @@ public class WebFormTestCase extends BaseTest {
         webFormPageEvents.uploadFile();
 
         webFormPageEvents.fillCheckBox();
+        webFormPageEvents.fillRadioButton();
 
         webFormPageEvents.clickSubmitButton();
 

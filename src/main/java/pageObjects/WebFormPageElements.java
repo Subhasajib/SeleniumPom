@@ -15,6 +15,8 @@ public interface WebFormPageElements {
 
     String checkBox1Id = "my-check-1";
     String checkBox2Id = "my-check-2";
+    String radioButton1Id = "my-radio-1";
+    String radioButton2Id = "my-radio-2";
 
     String submitButtonXPath = "/html/body/main/div/form/div/div[2]/button";
 }

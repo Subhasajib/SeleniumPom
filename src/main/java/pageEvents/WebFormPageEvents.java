@@ -88,13 +88,29 @@ public class WebFormPageEvents {
         WebElement cb2 = el.getWebElement("ID", WebFormPageElements.checkBox2Id);
 
         Assert.assertTrue(cb1.isSelected(), "Checkbox 1 should be checked by default");
-        Assert.assertFalse(cb2.isSelected(), "Checkbox 1 should be unchecked by default");
+        Assert.assertFalse(cb2.isSelected(), "Checkbox 2 should be unchecked by default");
 
         cb1.click();
         cb2.click();
 
         Assert.assertFalse(cb1.isSelected(), "Checkbox 1 should be unchecked");
-        Assert.assertTrue(cb2.isSelected(), "Checkbox 1 should be checked");
+        Assert.assertTrue(cb2.isSelected(), "Checkbox 2 should be checked");
+    }
+
+    public void fillRadioButton() {
+        WebElement rb1 = el.getWebElement("ID", WebFormPageElements.radioButton1Id);
+        WebElement rb2 = el.getWebElement("ID", WebFormPageElements.radioButton2Id);
+
+        Assert.assertTrue(rb1.isSelected(), "Radio button 1 should be checked by default");
+        Assert.assertFalse(rb2.isSelected(), "Radio button 2 should be unchecked by default");
+
+        rb2.click();
+        Assert.assertFalse(rb1.isSelected(), "Checkbox 1 should be unchecked");
+        Assert.assertTrue(rb2.isSelected(), "Checkbox 2 should be checked");
+
+        rb1.click();
+        Assert.assertTrue(rb1.isSelected(), "Radio button 1 should be checked");
+        Assert.assertFalse(rb2.isSelected(), "Radio button 2 should be unchecked");
     }
 
     public void clickSubmitButton() {

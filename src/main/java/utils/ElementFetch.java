@@ -8,6 +8,10 @@ import java.util.List;
 
 public class ElementFetch {
 
+    public String getPageTitle() {
+        return BaseTest.driver.getTitle();
+    }
+
     public WebElement getWebElement(String identifierType, String identifierValue) {
         return switch (identifierType) {
             case "XPATH" -> BaseTest.driver.findElement(By.xpath(identifierValue));

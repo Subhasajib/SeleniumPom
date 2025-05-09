@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="utils.SuiteListener"/>
     </listeners>
-    <test verbose="2" name="testCase/WebFormTC.java">
+    <test verbose="1" name="testCase/WebFormTC.java">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="testCase.WebFormTC"/>

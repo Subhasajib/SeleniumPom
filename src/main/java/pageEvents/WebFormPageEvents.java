@@ -12,6 +12,14 @@ public class WebFormPageEvents {
         Assert.assertEquals(el.getPageTitle(), "Web form", "Page title is not as expected");
     }
 
+    public void verifyHeading() {
+        Assert.assertEquals(
+                el.getWebElement("XPATH", WebFormPageElements.headingXPath).getText(),
+                "Web form",
+                "Heading is not as expected"
+        );
+    }
+
     public void inputText() {
         el.getWebElement("ID", WebFormPageElements.textInputId).sendKeys("Lorem ipsum dolor sit amet");
     }

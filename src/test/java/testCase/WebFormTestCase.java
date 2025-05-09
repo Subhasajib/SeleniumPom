@@ -23,6 +23,8 @@ public class WebFormTestCase extends BaseTest {
         webFormPageEvents.fillDataListDropdown();
         webFormPageEvents.uploadFile();
 
+        webFormPageEvents.fillCheckBox();
+
         webFormPageEvents.clickSubmitButton();
 
         submittedPageEvents.verifyPageTitle();

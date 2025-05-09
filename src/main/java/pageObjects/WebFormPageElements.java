@@ -13,5 +13,8 @@ public interface WebFormPageElements {
     String optionDataListXPath = "//datalist[@id='my-options']/option";
     String uploadFileName = "my-file";
 
+    String checkBox1Id = "my-check-1";
+    String checkBox2Id = "my-check-2";
+
     String submitButtonXPath = "/html/body/main/div/form/div/div[2]/button";
 }

@@ -83,6 +83,20 @@ public class WebFormPageEvents {
         el.getWebElement("NAME", WebFormPageElements.uploadFileName).sendKeys(filePath);
     }
 
+    public void fillCheckBox() {
+        WebElement cb1 = el.getWebElement("ID", WebFormPageElements.checkBox1Id);
+        WebElement cb2 = el.getWebElement("ID", WebFormPageElements.checkBox2Id);
+
+        Assert.assertTrue(cb1.isSelected(), "Checkbox 1 should be checked by default");
+        Assert.assertFalse(cb2.isSelected(), "Checkbox 1 should be unchecked by default");
+
+        cb1.click();
+        cb2.click();
+
+        Assert.assertFalse(cb1.isSelected(), "Checkbox 1 should be unchecked");
+        Assert.assertTrue(cb2.isSelected(), "Checkbox 1 should be checked");
+    }
+
     public void clickSubmitButton() {
         el.getWebElement("XPATH", WebFormPageElements.submitButtonXPath).click();
     }

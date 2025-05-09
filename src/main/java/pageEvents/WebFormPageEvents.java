@@ -78,6 +78,11 @@ public class WebFormPageEvents {
         Assert.assertTrue(found, "Option not found in the data list");
     }
 
+    public void uploadFile() {
+        String filePath = System.getProperty("user.dir") + "/src/main/resources/file/empty.txt";
+        el.getWebElement("NAME", WebFormPageElements.uploadFileName).sendKeys(filePath);
+    }
+
     public void clickSubmitButton() {
         el.getWebElement("XPATH", WebFormPageElements.submitButtonXPath).click();
     }

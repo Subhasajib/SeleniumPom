@@ -11,6 +11,7 @@ public interface WebFormPageElements {
     String dropdownSelectName = "my-select";
     String inputDataListName = "my-datalist";
     String optionDataListXPath = "//datalist[@id='my-options']/option";
+    String uploadFileName = "my-file";
 
     String submitButtonXPath = "/html/body/main/div/form/div/div[2]/button";
 }

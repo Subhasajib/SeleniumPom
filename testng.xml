@@ -4,10 +4,10 @@
     <listeners>
         <listener class-name="utils.SuiteListener"/>
     </listeners>
-    <test verbose="1" name="testCase/WebFormTC.java">
+    <test verbose="1" name="testCase/WebFormTestCase.java">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testCase.WebFormTC"/>
+            <class name="testCase.WebFormTestCase"/>
         </classes>
     </test>
 </suite>

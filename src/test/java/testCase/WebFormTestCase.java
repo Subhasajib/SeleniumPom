@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pageEvents.SubmittedPageEvents;
 import pageEvents.WebFormPageEvents;
 
-public class WebFormTC extends BaseTest {
+public class WebFormTestCase extends BaseTest {
     WebFormPageEvents webFormPageEvents = new WebFormPageEvents();
     SubmittedPageEvents submittedPageEvents = new SubmittedPageEvents();
 
@@ -18,6 +18,10 @@ public class WebFormTC extends BaseTest {
         webFormPageEvents.inputTextArea();
         webFormPageEvents.verifyDisabledInput();
         webFormPageEvents.verifyReadOnlyInput();
+
+        webFormPageEvents.fillSelectDropdown();
+        webFormPageEvents.fillDataListDropdown();
+
         webFormPageEvents.clickSubmitButton();
 
         submittedPageEvents.verifyPageTitle();

@@ -1,8 +1,12 @@
 package pageEvents;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pageObjects.WebFormPageElements;
 import utils.ElementFetch;
+
+import java.util.List;
 
 public class WebFormPageEvents {
 
@@ -44,6 +48,34 @@ public class WebFormPageEvents {
                 el.getWebElement("NAME", WebFormPageElements.readOnlyInputName).getDomAttribute("readonly"),
                 "Input is not read-only"
         );
+    }
+
+    public void fillSelectDropdown() {
+        Select select = new Select(el.getWebElement("NAME", WebFormPageElements.dropdownSelectName));
+        select.selectByValue("2");
+    }
+
+    public void fillDataListDropdown() {
+        String optionToSelect = "New York";
+
+        WebElement inputElement = el.getWebElement("NAME", WebFormPageElements.inputDataListName);
+        inputElement.clear();
+        inputElement.sendKeys(optionToSelect);
+
+        List<WebElement> options = el.getWebElements("XPATH", WebFormPageElements.optionDataListXPath);
+        boolean found = false;
+
+
+        for (WebElement opt : options) {
+            String optValue = opt.getDomAttribute("value");
+            Assert.assertNotNull(optValue);
+            if (optValue.equals(optionToSelect)) {
+                found = true;
+                break;
+            }
+        }
+
+        Assert.assertTrue(found, "Option not found in the data list");
     }
 
     public void clickSubmitButton() {

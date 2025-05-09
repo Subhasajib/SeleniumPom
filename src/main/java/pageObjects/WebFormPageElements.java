@@ -8,5 +8,9 @@ public interface WebFormPageElements {
     String disableInputName = "my-disabled";
     String readOnlyInputName = "my-readonly";
 
+    String dropdownSelectName = "my-select";
+    String inputDataListName = "my-datalist";
+    String optionDataListXPath = "//datalist[@id='my-options']/option";
+
     String submitButtonXPath = "/html/body/main/div/form/div/div[2]/button";
 }

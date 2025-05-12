@@ -27,6 +27,7 @@ public interface WebFormPageElements {
     String targetMonthXPath = "//div[@class='datepicker-months']//span[@class='month' and text()='Feb']";
     String targetDayXPath = "//div[@class='datepicker-days']//td[@class='day' and text()='13']";
 
+    String colorPickerXPath = "//input[@type='color'][@name='my-colors']";
     String inputRangeXPath = "//input[@type='range'][@name='my-range']";
     String inputHiddenXPath = "//input[@type='hidden'][@name='my-hidden']";
 

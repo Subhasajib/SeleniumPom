@@ -114,6 +114,11 @@ public class WebFormPageEvents {
         Assert.assertFalse(rb2.isSelected(), "Radio button 2 should be unchecked");
     }
 
+    public void fillColorPicker() {
+        WebElement colorPicker = el.getWebElement("XPATH", WebFormPageElements.colorPickerXPath);
+        colorPicker.sendKeys("#FF0000");
+    }
+
     public void fillDatePicker() {
         WebElement dateInput = el.getWebElement("XPATH", WebFormPageElements.inputDateXPath);
         dateInput.click();

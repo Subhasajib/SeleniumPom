@@ -26,6 +26,7 @@ public class WebFormTestCase extends BaseTest {
         webFormPageEvents.fillCheckBox();
         webFormPageEvents.fillRadioButton();
 
+        webFormPageEvents.fillColorPicker();
         webFormPageEvents.fillDatePicker();
         webFormPageEvents.fillRangeInput();
         webFormPageEvents.verifyInputHidden();

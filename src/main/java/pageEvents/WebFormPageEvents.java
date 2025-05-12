@@ -114,6 +114,32 @@ public class WebFormPageEvents {
         Assert.assertFalse(rb2.isSelected(), "Radio button 2 should be unchecked");
     }
 
+    public void fillDatePicker() {
+        WebElement dateInput = el.getWebElement("XPATH", WebFormPageElements.inputDateXPath);
+        dateInput.click();
+
+        WebElement datePickerSwitch1 = el.getWebElement("XPATH", WebFormPageElements.datePickerSwitch1XPath);
+        datePickerSwitch1.click();
+
+        WebElement datePickerSwitch2 = el.getWebElement("XPATH", WebFormPageElements.datePickerSwitch2XPath);
+        datePickerSwitch2.click();
+
+        WebElement prevButton = el.getWebElement("XPATH", WebFormPageElements.prevButtonClass);
+        prevButton.click();
+
+        WebElement targetYear = el.getWebElement("XPATH", WebFormPageElements.targetYearXPath);
+        targetYear.click();
+
+        WebElement targetMonth = el.getWebElement("XPATH", WebFormPageElements.targetMonthXPath);
+        targetMonth.click();
+
+        WebElement targetDay = el.getWebElement("XPATH", WebFormPageElements.targetDayXPath);
+        targetDay.click();
+
+        WebElement body = el.getWebElement("XPATH", WebFormPageElements.bodyXPath);
+        body.click();
+    }
+
     public void fillRangeInput() {
         WebElement rangeInput = el.getWebElement("XPATH", WebFormPageElements.inputRangeXPath);
 

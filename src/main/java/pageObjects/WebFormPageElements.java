@@ -18,6 +18,7 @@ public interface WebFormPageElements {
     String radioButton1Id = "my-radio-1";
     String radioButton2Id = "my-radio-2";
 
+    String inputRangeXPath = "//input[@type='range'][@name='my-range']";
     String inputHiddenXPath = "//input[@type='hidden'][@name='my-hidden']";
 
     String submitButtonXPath = "//button[@type='submit']";

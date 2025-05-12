@@ -1,5 +1,6 @@
 package pageEvents;
 
+import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -111,6 +112,14 @@ public class WebFormPageEvents {
         rb1.click();
         Assert.assertTrue(rb1.isSelected(), "Radio button 1 should be checked");
         Assert.assertFalse(rb2.isSelected(), "Radio button 2 should be unchecked");
+    }
+
+    public void fillRangeInput() {
+        WebElement rangeInput = el.getWebElement("XPATH", WebFormPageElements.inputRangeXPath);
+
+        BaseTest.js.executeScript("arguments[0].value = arguments[1]", rangeInput, 7);
+        BaseTest.js.executeScript("arguments[0].value = arguments[1]", rangeInput, -5);
+        BaseTest.js.executeScript("arguments[0].value = arguments[1]", rangeInput, 3);
     }
 
     public void verifyInputHidden() {

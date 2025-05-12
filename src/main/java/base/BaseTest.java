@@ -8,6 +8,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -22,6 +23,7 @@ import java.time.Duration;
 
 public class BaseTest {
     public static WebDriver driver;
+    public static JavascriptExecutor js;
     public ExtentSparkReporter sparkReporter;
     public ExtentReports extent;
     public ExtentTest logger;
@@ -49,6 +51,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.get(Constants.baseUrl);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        js = (JavascriptExecutor) driver;
     }
 
     @AfterMethod

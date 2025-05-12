@@ -3,7 +3,7 @@
 This project demonstrates automated testing of various input elements on the official [Selenium Web Form](https://www.selenium.dev/selenium/web/web-form.html) using **Selenium WebDriver** with the **Page Object Model (POM)** design pattern in Java.
 
 ## 📂 Project Structure
-
+```
 SeleniumPom/
 ├── src/
 │ ├── main/
@@ -21,6 +21,7 @@ SeleniumPom/
 ├── screenshots
 ├── pom.xml
 └── testng.xml
+```
 
 ## 🚀 Features
 

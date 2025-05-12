@@ -113,6 +113,14 @@ public class WebFormPageEvents {
         Assert.assertFalse(rb2.isSelected(), "Radio button 2 should be unchecked");
     }
 
+    public void verifyInputHidden() {
+        WebElement inputHidden = el.getWebElement("XPATH", WebFormPageElements.inputHiddenXPath);
+        String inputType = inputHidden.getDomAttribute("type");
+
+        Assert.assertNotNull(inputType);
+        Assert.assertEquals(inputType, "hidden", "Input type is not hidden");
+    }
+
     public void clickSubmitButton() {
         el.getWebElement("XPATH", WebFormPageElements.submitButtonXPath).click();
     }

